@@ -1,0 +1,82 @@
+//global css.
+//Include font-awesome
+@import "~font-awesome/css/font-awesome.css";
+//Include what we need in bootstrap.
+@import "bootstrap/bootstrap";
+@import "inspinia/style";
+//Animated
+@import "~animate.css/animate.min.css";
+//swiper
+@import "~swiper/dist/css/swiper.min.css";
+@import "global/border";
+@import "global/button";
+@import "global/color";
+@import "global/font";
+@import "global/layout";
+@import "global/miscellaneous";
+@import "global/responsive";
+@import "global/variables";
+@import "~element-ui/lib/theme-default/index.css";
+//h2被污染了
+.el-notification__title {
+	margin-top: 0;
+}
+
+
+//手机端的弹出框太大了
+@media (max-width: 768px) {
+	.el-message-box__wrapper {
+		.el-message-box {
+			width: 300px;
+		}
+	}
+}
+
+html, body {
+	font-family: "微软雅黑", Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif, "open sans";
+	font-size: 13px;
+	color: @text-color;
+	background-color: #f3f3f4;
+
+	img {
+		max-width: 100%;
+	}
+
+}
+
+//列表单元格的样式。
+.nb-app {
+
+	//cell标题样式
+	.cell-title {
+		font-size: 16px;
+		color: #666;
+		font-family: "微软雅黑", Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif, "open sans";
+	}
+
+	.cell-description {
+		font-size: 12px;
+		color: #888888;
+		margin: 5px 0;
+	}
+
+	.cell-content {
+		font-size: 12px;
+		color: #676a6c;
+		margin: 5px 0;
+	}
+
+  .animated {
+    animation-fill-mode: none;
+  }
+
+}
+
+//超链接颜色.
+a {
+	color: @neobay-blue;
+
+	&:hover, &:focus {
+		color: @neobay-darken-blue;
+	}
+}

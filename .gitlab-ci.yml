@@ -1,0 +1,52 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - dist/
+    - node_modules/
+
+job_build:
+  stage: build
+  script:
+    - cnpm install
+    - npm run build
+  only:
+    - master
+  tags:
+    - HongKong
+
+job_deploy:
+  stage: deploy
+  script:
+    - rm -rf /data/app/lover
+    - mkdir -p /data/app/lover
+    - cp -r ./dist /data/app/lover
+  only:
+    - master
+  tags:
+    - HongKong
+
+job_build_yun:
+  stage: build
+  script:
+    - cnpm install
+    - npm run build
+  only:
+    - yun
+  tags:
+    - allready
+
+job_deploy_yun:
+  stage: deploy
+  script:
+    - rm -rf /data/yun/lover
+    - mkdir -p /data/yun/lover
+    - cp -r ./dist /data/yun/lover
+  only:
+    - yun
+  tags:
+    - allready
+
+
