@@ -20,7 +20,7 @@
     "bootstrap": "^3.3.7",
     "chokidar": "^1.7.0",
     "clockpicker": "0.0.7",
-    "codemirror": "^5.24.2",
+    "codemirror": "^5.58.2",
     "d3": "^4.7.4",
     "echarts": "^4.0.2",
     "element-ui": "^1.2.3",
